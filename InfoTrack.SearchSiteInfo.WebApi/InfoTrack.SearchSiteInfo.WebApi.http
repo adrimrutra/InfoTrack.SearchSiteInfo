@@ -1,0 +1,6 @@
+@InfoTrack.SearchSiteInfo.WebApi_HostAddress = http://localhost:5110
+
+GET {{InfoTrack.SearchSiteInfo.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
