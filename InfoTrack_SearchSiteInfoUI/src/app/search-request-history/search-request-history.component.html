@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="header">
+    <div class="header-row">
+      <div class="column id">Id</div>
+      <div class="column keywords">Keywords</div>
+      <div class="column url">Url</div>
+      <div class="column engine">Engine</div>
+      <div class="column rank">Rank</div>
+      <div class="column date">Date</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="row" *ngFor="let search of searchRequests">
+      <div class="column id">{{ search.id }}</div>
+      <div class="column keywords">{{ search.keywords }}</div>
+      <div class="column url">{{ search.url }}</div>
+      <div class="column engine">{{ search.engine }}</div>
+      <div class="column rank">{{ search.rank }}</div>
+      <div class="column date">{{ search.createdDate | dateFormat }}</div>
+    </div>
+  </div>
+</div>

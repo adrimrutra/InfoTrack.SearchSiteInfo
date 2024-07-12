@@ -1,0 +1,65 @@
+:host {
+  .container {
+    display: block;
+    justify-content: center;
+    margin: 30px;
+    .header {
+      display: block;
+      width: 100%;
+      border: 2px solid #dee2e6;
+      font-size: 25px;
+      font-weight: 900;
+      color: #212529;
+      .header-row {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        height: 50px;
+      }
+    }
+    .body {
+      display: block;
+      border: 2px solid #dee2e6;
+      width: 100%;
+      font-size: 15px;
+      font-weight: 700;
+      color: #212529;
+      .row {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        height: 30px;
+      }
+    }
+    .column {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+
+      &.id {
+        width: 85px;
+        border: 1px solid #dee2e6;
+      }
+      &.keywords {
+        width: 40%;
+        border: 1px solid #dee2e6;
+      }
+      &.url {
+        width: 400px;
+        border: 1px solid #dee2e6;
+      }
+      &.engine {
+        width: 180px;
+        border: 1px solid #dee2e6;
+      }
+      &.rank {
+        width: 150px;
+        border: 1px solid #dee2e6;
+      }
+      &.date {
+        width: 400px;
+        border: 1px solid #dee2e6;
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="row-container">
+    <div class="form-container">
+      <form [formGroup]="searchRequestForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <h1>Please Perform Search</h1>
+        </div>
+        <div class="row">
+          <label for="keyword" class="form-label">Keywords</label>
+          <input
+            type="text"
+            class="form-control"
+            id="keyword"
+            placeholder="Keywords"
+            formControlName="keywords"
+          />
+          <div
+            class="error-message"
+            *ngIf="
+              searchRequestForm.get('keywords')?.errors?.['required'] &&
+              searchRequestForm.get('keywords')?.touched
+            "
+          >
+            Keywords required.
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="url" class="form-label">Url</label>
+          <input
+            type="text"
+            class="form-control"
+            id="url"
+            placeholder="Url"
+            formControlName="url"
+          />
+          <div
+            class="error-message"
+            *ngIf="
+              searchRequestForm.get('url')?.errors?.['required'] &&
+              searchRequestForm.get('url')?.touched
+            "
+          >
+            Url required.
+          </div>
+          <div
+            class="error-message"
+            *ngIf="
+              searchRequestForm.get('url')?.errors?.['pattern'] &&
+              searchRequestForm.get('url')?.touched
+            "
+          >
+            Ivalid URL.
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="eng" class="form-label">Engine</label>
+          <select
+            id="eng"
+            class="form-select"
+            aria-label="Default select example"
+            formControlName="engines"
+          >
+            <option *ngFor="let engine of engines" [value]="engine">
+              {{ engine }}
+            </option>
+          </select>
+        </div>
+
+        <div class="btn-margin">
+          <button
+            class="btn"
+            type="submit"
+            [disabled]="searchRequestForm.invalid"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="result-container">
+      <div class="row" *ngIf="result != null; else loadingTemplate">
+        <input
+          type="text"
+          class="form-control form-control-readonly"
+          value="The company sits:{{ result!.url }} is on {{
+            result.rank
+          }} place in {{ result!.engine }} search engine."
+          readonly
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loadingTemplate>
+  <div class="row" *ngIf="loading">
+    <input
+      type="text"
+      class="form-control form-control-readonly"
+      value="{{ loadingValue }}"
+      readonly
+    />
+  </div>
+</ng-template>

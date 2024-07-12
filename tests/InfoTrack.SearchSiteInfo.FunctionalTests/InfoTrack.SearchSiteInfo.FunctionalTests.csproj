@@ -21,7 +21,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.Infrastructure\InfoTrack.SearchSiteInfo.Infrastructure.csproj" />
     <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.UseCases\InfoTrack.SearchSiteInfo.UseCases.csproj" />
-    <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.Web\InfoTrack.SearchSiteInfo.Web.csproj" />
   </ItemGroup>
 
 </Project>

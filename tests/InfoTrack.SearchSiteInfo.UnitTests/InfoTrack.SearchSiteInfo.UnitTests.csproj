@@ -12,8 +12,12 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Moq" />
     <PackageReference Include="NSubstitute" />
+    <PackageReference Include="NUnit" />
+    <PackageReference Include="NUnit3TestAdapter" />
     <PackageReference Include="xunit.runner.visualstudio">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -33,12 +37,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.Core\InfoTrack.SearchSiteInfo.Core.csproj" />
     <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.UseCases\InfoTrack.SearchSiteInfo.UseCases.csproj" />
+    <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.WebApi\InfoTrack.SearchSiteInfo.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

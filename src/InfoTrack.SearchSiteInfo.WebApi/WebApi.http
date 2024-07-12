@@ -1,0 +1,17 @@
+@host=https://localhost
+@port=22649
+
+
+###
+
+// Add a new searchrequest
+POST {{host}}:{{port}}/SearchRequest
+Content-Type: application/json
+
+{
+  "Keywords": "land registry searches",
+  "Url": "www.infotrack.co.uk",
+  "Engine": "Google"
+}
+
+###
