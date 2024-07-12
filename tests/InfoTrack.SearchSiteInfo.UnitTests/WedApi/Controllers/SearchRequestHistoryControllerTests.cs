@@ -63,7 +63,7 @@ public class SearchRequestHistoryControllerTests
     _mockMapper.Setup(m => m.Map<IEnumerable<SearchRequestViewModel>>(It.IsAny<IEnumerable<SearchRequest>>())).Returns(searchRequestViewModel);
 
     var _mockMediator = Substitute.For<IMediator>();
-    _mockMediator.Send(new GetSearchRequestHistoryQuery(), cancellationToken).Returns(expectedResult);
+   // _mockMediator.Send(new GetSearchRequestHistoryQuery(), cancellationToken).Returns(expectedResult);
    // _mockMediator.Send(new GetSearchRequestHistoryQuery(), cancellationToken).ReturnsForAll(expectedResult);
 
     
