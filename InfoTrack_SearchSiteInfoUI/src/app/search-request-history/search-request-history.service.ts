@@ -1,6 +1,6 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 import { BaseReponse } from '../models/base-response';
 import { SearchRequestResponse } from '../models/search-request-response';
@@ -14,7 +14,6 @@ export class SearchRequestHistoryService {
   getAllSearchRequestHistory(): Observable<
     BaseReponse<Array<SearchRequestResponse>>
   > {
-    return this.httpClient
-      .get(`${environment.apiUrl}/api/history/getAll`);
+    return this.httpClient.get(`${environment.apiUrl}/api/History/getAll`);
   }
 }

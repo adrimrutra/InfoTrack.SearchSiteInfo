@@ -4,10 +4,6 @@ using InfoTrack.SearchSiteInfo.Infrastructure;
 using Serilog;
 using Serilog.Extensions.Logging;
 using InfoTrack.SearchSiteInfo.WebApi.Infrastructure;
-using InfoTrack.SearchSiteInfo.UseCases.Searech.Create;
-using FluentValidation;
-using System.Reflection;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -26,7 +22,6 @@ var microsoftLogger = new SerilogLoggerFactory(logger)
 
 logger.Information("Starting web host");
 
-// AddAsync services to the container.
 builder.Services.AddCors(options =>
 {
   options.AddPolicy(name: MyAllowSpecificOrigins,
@@ -52,8 +47,6 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 
 if (app.Environment.IsDevelopment())
 {
@@ -93,3 +86,5 @@ static void SeedDatabase(WebApplication app)
     logger.LogError(ex, "An error occurred seeding the DB. {exceptionMessage}", ex.Message);
   }
 }
+
+public partial class Program { }

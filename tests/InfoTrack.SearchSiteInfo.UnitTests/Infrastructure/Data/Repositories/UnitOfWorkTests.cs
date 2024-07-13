@@ -6,7 +6,7 @@ using InfoTrack.SearchSiteInfo.Core.Entities;
 using InfoTrack.SearchSiteInfo.Infrastructure.Data;
 using InfoTrack.SearchSiteInfo.Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
-using NUnit.Framework;
+using Xunit;
 
 namespace InfoTrack.SearchSiteInfo.UnitTests.Infrastructure.Data.Repositories;
 public class UnitOfWorkTests : IDisposable
@@ -24,7 +24,7 @@ public class UnitOfWorkTests : IDisposable
     _context = new AppDbContext(_options);
   }
 
-  [Test]
+  [Fact]
   public void GetRepository_WhenCalled_ShouldReturnRepository()
   {
     // Arrange
@@ -38,7 +38,7 @@ public class UnitOfWorkTests : IDisposable
     repository.Should().BeOfType<Repository<SearchRequest>>();
   }
 
-  [Test]
+  [Fact]
   public async Task SaveChangesAsync_WhenCalled_ShouldSaveChanges()
   {
     // Arrange

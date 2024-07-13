@@ -31,12 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="xunit.runner.json">
-	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.Core\InfoTrack.SearchSiteInfo.Core.csproj" />
     <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.UseCases\InfoTrack.SearchSiteInfo.UseCases.csproj" />
     <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.WebApi\InfoTrack.SearchSiteInfo.WebApi.csproj" />

@@ -1,6 +1,7 @@
 ﻿namespace InfoTrack.SearchSiteInfo.Core.Entities;
-public class SearchRequest : EntityBase
+public class SearchRequest
 {
+  public int Id { get; set; }
   public required string Keywords { get; set; }
 
   public required string Url { get; set; }

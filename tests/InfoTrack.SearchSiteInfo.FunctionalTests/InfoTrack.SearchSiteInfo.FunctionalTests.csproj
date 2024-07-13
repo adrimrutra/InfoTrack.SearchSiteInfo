@@ -4,6 +4,7 @@
   <ItemGroup>
     <PackageReference Include="FluentAssertions" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="NUnit" />
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio">
       <PrivateAssets>all</PrivateAssets>
@@ -19,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.Infrastructure\InfoTrack.SearchSiteInfo.Infrastructure.csproj" />
-    <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.UseCases\InfoTrack.SearchSiteInfo.UseCases.csproj" />
+    <ProjectReference Include="..\..\InfoTrack.SearchSiteInfo.KernelSetupTests\InfoTrack.SearchSiteInfo.KernelSetupTests.csproj" />
+    <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.WebApi\InfoTrack.SearchSiteInfo.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

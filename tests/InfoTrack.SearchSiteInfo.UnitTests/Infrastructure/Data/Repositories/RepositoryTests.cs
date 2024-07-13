@@ -7,7 +7,7 @@ using InfoTrack.SearchSiteInfo.Infrastructure.Data;
 using InfoTrack.SearchSiteInfo.Infrastructure.Data.Repositories;
 using InfoTrack.SearchSiteInfo.Core.Extensions;
 using Microsoft.EntityFrameworkCore;
-using NUnit.Framework;
+using Xunit;
 
 namespace InfoTrack.SearchSiteInfo.UnitTests.Infrastructure.Data.Repositories;
 public class RepositoryTests : IDisposable
@@ -29,7 +29,7 @@ public class RepositoryTests : IDisposable
     searchRequests = new List<SearchRequest>() { searchRequest1, searchRequest2, searchRequest3 };
   }
 
-  [Test]
+  [Fact]
   public async Task AddAsync_WhenEntityIsValid_ShouldAddEntityToDbSet()
   {
     // Arrange
@@ -53,7 +53,7 @@ public class RepositoryTests : IDisposable
     result.Should().Be(1);
   }
 
-  [Test]
+  [Fact]
   public async Task GetAllAsync_WhenDbSetIsNotEmpty_ShouldReturnAllEntities()
   {
     // Arrange
@@ -73,7 +73,7 @@ public class RepositoryTests : IDisposable
     }
   }
 
-  [Test]
+  [Fact]
   public async Task GetAllAsync_WhenDbSetIsEmpty_ShouldReturnEmptyCollection()
   {
     // Arrange

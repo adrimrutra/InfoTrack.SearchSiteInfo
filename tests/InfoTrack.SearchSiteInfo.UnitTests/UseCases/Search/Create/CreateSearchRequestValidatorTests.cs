@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 using InfoTrack.SearchSiteInfo.UseCases.Searech.Create;
-using NUnit.Framework;
+using Xunit;
 
 namespace InfoTrack.SearchSiteInfo.UnitTests.UseCases.Search.Create;
 public class CreateSearchRequestValidatorTests
@@ -10,10 +10,9 @@ public class CreateSearchRequestValidatorTests
   private readonly string URL = "www.infotrack.co.uk";
   private readonly string ENGINE = "Google";
 
-
-  [TestCase(null)]
-  [TestCase("")]
-  [TestCase(" ")]
+  [Theory]
+  [InlineData("")]
+  [InlineData(" ")]
   public void Validate_Fails_If_Keywords_Is_Null(string keywords)
   {
     // Arrange
@@ -26,7 +25,8 @@ public class CreateSearchRequestValidatorTests
     result.IsValid.Should().BeFalse();
   }
 
-  [TestCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")]
+  [Theory]
+  [InlineData("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")]
   public void Validate_Fails_If_Keywords_Is_To_Long(string keywords)
   {
     // Arrange
@@ -39,9 +39,9 @@ public class CreateSearchRequestValidatorTests
     result.IsValid.Should().BeFalse();
   }
 
-  [TestCase(null)]
-  [TestCase("")]
-  [TestCase(" ")]
+  [Theory]
+  [InlineData("")]
+  [InlineData(" ")]
   public void Validate_Fails_If_Url_Is_Null(string url)
   {
     // Arrange
@@ -54,7 +54,7 @@ public class CreateSearchRequestValidatorTests
     result.IsValid.Should().BeFalse();
   }
 
-  [Test]
+  [Fact]
   public void Validate_Fails_If_Url_Is_Incorrect_With_Message()
   {
     // Arrange
@@ -68,9 +68,9 @@ public class CreateSearchRequestValidatorTests
     result.Errors.Should().ContainSingle().Which.ErrorMessage.Should().Be("Incorrect Url");
   }
 
-  [TestCase(null)]
-  [TestCase("")]
-  [TestCase(" ")]
+  [Theory]
+  [InlineData("")]
+  [InlineData(" ")]
   public void Validate_Fails_If_Engine_Is_Null(string engine)
   {
     // Arrange
@@ -83,7 +83,7 @@ public class CreateSearchRequestValidatorTests
     result.IsValid.Should().BeFalse();
   }
 
-  [Test]
+  [Fact]
   public void Validate_Fails_If_Engine_Is_Incorrect_With_Message()
   {
     // Arrange
@@ -97,7 +97,7 @@ public class CreateSearchRequestValidatorTests
     result.Errors.Should().ContainSingle().Which.ErrorMessage.Should().Be("Incorrect Engine");
   }
 
-  [Test]
+  [Fact]
   public void Validate_True_If_All_Params_Is_Correct()
   {
     // Arrange

@@ -1,11 +1,11 @@
 ﻿using FluentAssertions;
 using InfoTrack.SearchSiteInfo.Core.Services;
-using NUnit.Framework;
+using Xunit;
 
 namespace InfoTrack.SearchSiteInfo.UnitTests.Core.Services;
 public class SearchResponseParserServiceTests
 {
-  [Test]
+  [Fact]
   public void ParseSearchResponse_WhenResponseContainsUrl_ShouldReturnIndex()
   {
     // Arrange
@@ -21,7 +21,7 @@ public class SearchResponseParserServiceTests
     result.Should().Be(2);
   }
 
-  [Test]
+  [Fact]
   public void ParseSearchResponse_WhenResponseNotContainsUrl_ShouldReturnZero()
   {
     // Arrange

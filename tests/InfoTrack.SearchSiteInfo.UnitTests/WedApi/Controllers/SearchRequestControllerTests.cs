@@ -6,12 +6,12 @@ using InfoTrack.SearchSiteInfo.WebApi.Controllers;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using NUnit.Framework;
+using Xunit;
 
 namespace InfoTrack.SearchSiteInfo.UnitTests.WedApi.Controllers;
 public class SearchRequestControllerTests
 {
-  [Test]
+  [Fact]
   public void CreateSearchRequestAsync_WhenCalled_ReturnsOkResult()
   {
     // Arrange
@@ -43,18 +43,18 @@ public class SearchRequestControllerTests
     mediator.Setup(m => m.Send(request, cancellationToken)).ReturnsAsync(expectedResult);
 
     // Act
-    var actionResult =  controller.CreateSearchRequestAsync(request, cancellationToken)?.Result;
+    var result =  controller.CreateSearchRequestAsync(request, cancellationToken)?.Result;
 
     // Assert
-    actionResult.Should().NotBeNull();
-    actionResult.Should().BeOfType<OkObjectResult>();
+    result.Should().NotBeNull();
+    result.Should().BeOfType<OkObjectResult>();
 
-    var okObjectResult = actionResult as OkObjectResult;
+    var okObjectResult = result as OkObjectResult;
     okObjectResult?.StatusCode.Should().Be(200);
     okObjectResult?.Value.Should().BeEquivalentTo(expectedResult);
   }
 
-  [Test]
+  [Fact]
   public void CreateSearchRequestAsync_WhenCalled_ReturnsBadRequestResult()
   {
     // Arrange

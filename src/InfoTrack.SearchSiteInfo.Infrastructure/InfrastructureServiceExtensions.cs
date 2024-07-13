@@ -22,9 +22,6 @@ public static class InfrastructureServiceExtensions
 
     services.AddTransient<IRepository<SearchRequest>, Repository<SearchRequest>>();
     services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-
-
     services.AddScoped<ISearchRequestService, SearchRequestService>();
     services.AddScoped<ISearchRequestHandler, SearchRequestHandler>();
     services.AddScoped<ISearchResponseParserService, SearchResponseParserService>();

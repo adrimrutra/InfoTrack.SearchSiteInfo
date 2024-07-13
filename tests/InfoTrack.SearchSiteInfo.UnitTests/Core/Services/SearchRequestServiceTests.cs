@@ -4,13 +4,23 @@ using InfoTrack.SearchSiteInfo.Core.Models;
 using InfoTrack.SearchSiteInfo.Core.Interfaces;
 using NSubstitute;
 using Microsoft.Extensions.Logging;
-using NUnit.Framework;
 using FluentAssertions;
+using Xunit;
+using Moq;
 
 namespace InfoTrack.SearchSiteInfo.UnitTests.Core.Services;
 public class SearchRequestServiceTests
 {
-  [Test]
+  private readonly Mock<ISearchRequestHandler> _searchRequestHandler;
+  private readonly Mock<ILogger<SearchRequestService>> _logger;
+
+  public SearchRequestServiceTests()
+  {
+    _searchRequestHandler = new ();
+    _logger = new ();
+  }
+
+  [Fact]
   public void GetSearchRequest_WhenSearchRequestIsValid_ShouldReturnSearchRequest()
   {
     // Arrange
@@ -25,11 +35,9 @@ public class SearchRequestServiceTests
     var cancellationToken = new CancellationToken();
     var searchRequestHandler =  Substitute.For<ISearchRequestHandler>();
 
-    searchRequestHandler.HandleSearchRequestAsync(searchRequest, cancellationToken).Returns(10);
+    _searchRequestHandler.Setup(x => x.HandleSearchRequestAsync(searchRequest, cancellationToken)).ReturnsAsync(10);
 
-    var logger =  Substitute.For<ILogger<SearchRequestService>>();
-
-    var service = new SearchRequestService(searchRequestHandler, logger);
+    var service = new SearchRequestService(_searchRequestHandler.Object, _logger.Object);
 
     // Act
     var result = service.CreateSearchRequestAsync(searchRequest, new CancellationToken())?.Result;
@@ -37,13 +45,14 @@ public class SearchRequestServiceTests
     // Assert
     result.Should().Be(10);
 
-  //  logger.Received().LogInformation("Successfully Create Search Request Async with request:{request}", searchRequest);
+    var error = $"Successfully Create Search Request Async with request:{searchRequest}";
 
-    //logger.Received().Log(
-    //       LogLevel.Error,
-    //       Arg.Any<EventId>(),
-    //       Arg.Is<object>(o => o.ToString() == logError),
-    //       null,
-    //       Arg.Any<Func<object, Exception?, string>>());
+    _logger.Verify(x => x.Log(
+          Microsoft.Extensions.Logging.LogLevel.Information,
+          It.IsAny<EventId>(),
+          It.IsAny<It.IsAnyType>(),
+          It.IsAny<Exception>(),
+          It.IsAny<Func<It.IsAnyType, Exception?, string>>()),
+          Times.Once);
   }
 }

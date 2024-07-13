@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\InfoTrack.SearchSiteInfo.Infrastructure\InfoTrack.SearchSiteInfo.Infrastructure.csproj" />
     <ProjectReference Include="..\InfoTrack.SearchSiteInfo.UseCases\InfoTrack.SearchSiteInfo.UseCases.csproj" />
   </ItemGroup>

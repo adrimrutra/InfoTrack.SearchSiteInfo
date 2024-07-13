@@ -20,6 +20,13 @@ public class GetSearchRequestHistoryHandler(IUnitOfWork _unitOfWork, IMapper _ma
     var repository = _unitOfWork.GetRepository<SearchRequest>();
     var searchRequests = await repository.GetAllAsync(cancellationToken);
 
+    if(searchRequests == null)
+    {
+      response.Succcess = false;
+      response.Message = "Search Request History Query failed!";
+      return response;
+    }
+
     response.Data = _mapper.Map<IEnumerable<SearchRequestViewModel>>(searchRequests);
     response.Succcess = true;
     response.Message = "Search Request History Query succeed!";

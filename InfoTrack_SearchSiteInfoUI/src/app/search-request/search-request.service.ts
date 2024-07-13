@@ -16,7 +16,7 @@ export class SearchRequestService {
     searchRequest: SearchRequest
   ): Observable<BaseReponse<SearchRequestResponse>> {
     return this.httpClient.post(
-      `${environment.apiUrl}/api/search`,
+      `${environment.apiUrl}/api/Search`,
       searchRequest
     );
   }

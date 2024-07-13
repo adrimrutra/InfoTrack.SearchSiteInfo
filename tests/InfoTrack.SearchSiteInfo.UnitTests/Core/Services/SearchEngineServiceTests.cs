@@ -3,7 +3,7 @@ using FluentAssertions;
 using InfoTrack.SearchSiteInfo.Core.Constants;
 using InfoTrack.SearchSiteInfo.Core.Services;
 using NSubstitute;
-using NUnit.Framework;
+using Xunit;
 
 
 namespace InfoTrack.SearchSiteInfo.UnitTests.Core.Services;
@@ -11,7 +11,7 @@ public class SearchEngineServiceTests
 {
   private readonly string KEYWORDS = "land registry searches";
 
-  [Test]
+  [Fact]
   public void CreateUrl_WhenEngineIsGoogle_ShouldReturnGoogleUrl()
   {
     // Arrange
@@ -25,7 +25,7 @@ public class SearchEngineServiceTests
     result.Should().Be(expectedResult);
   }
 
-  [Test]
+  [Fact]
   public void CreateUrl_WhenEngineIsBing_ShouldReturnBingUrl()
   {
     // Arrange
@@ -39,7 +39,7 @@ public class SearchEngineServiceTests
     result.Should().Be(expectedResult);
   }
 
-  [Test]
+  [Fact]
   public void CreateUrl_WhenEngineIsYahoo_ShouldReturnYahooUrl()
   {
     // Arrange
@@ -53,7 +53,7 @@ public class SearchEngineServiceTests
     result.Should().Be(expectedResult);
   }
 
-  [Test]
+  [Fact]
   public void CreateUrl_WhenEngineIsNotSupported_ShouldThrowException()
   {
     // Arrange
@@ -68,7 +68,7 @@ public class SearchEngineServiceTests
   }
 
 
-  [Test]
+  [Fact]
   public void GetSplitter_WhenEngineIsGoogle_ShouldReturnGoogleSplitter()
   {
     // Arrange
@@ -82,7 +82,7 @@ public class SearchEngineServiceTests
     result.Should().Be(expectedResult);
   }
 
-  [Test]
+  [Fact]
   public void GetSplitter_WhenEngineIsBing_ShouldReturnBingSplitter()
   {
     // Arrange
@@ -96,7 +96,7 @@ public class SearchEngineServiceTests
     result.Should().Be(expectedResult);
   }
 
-  [Test]
+  [Fact]
   public void GetSplitter_WhenEngineIsYahoo_ShouldReturnYahooSplitter()
   {
     // Arrange
@@ -110,7 +110,7 @@ public class SearchEngineServiceTests
     result.Should().Be(expectedResult);
   }
 
-  [Test]
+  [Fact]
   public void GetSplitter_WhenEngineIsNotSupported_ShouldThrowException()
   {
     // Arrange
@@ -124,7 +124,7 @@ public class SearchEngineServiceTests
     act.Should().Throw<NotSupportedException>().WithMessage("Engine not found");
   }
 
-  [Test]
+  [Fact]
   public void AddDefaultRequestHeaders_WhenEngineIsBing_ShouldAddDefaultRequestHeaders()
   {
     // Arrange
@@ -140,7 +140,7 @@ public class SearchEngineServiceTests
     httpClient.DefaultRequestHeaders.UserAgent.Should().NotBeEquivalentTo(expectedResult);
   }
 
-  [Test]
+  [Fact]
   public void AddDefaultRequestHeaders_WhenEngineIsYahoo_ShouldAddDefaultRequestHeaders()
   {
     // Arrange
@@ -156,7 +156,7 @@ public class SearchEngineServiceTests
     httpClient.DefaultRequestHeaders.UserAgent.Should().NotBeEquivalentTo(expectedResult);
   }
 
-  [Test]
+  [Fact]
   public void AddDefaultRequestHeaders_WhenEngineIsGoogle_ShouldAddDefaultRequestHeaders()
   {
     // Arrange

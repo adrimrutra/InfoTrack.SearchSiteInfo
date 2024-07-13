@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace InfoTrack.SearchSiteInfo.WebApi.Controllers;
-[Route("api/search")]
+[Route("api/Search")]
 [ApiController]
 public class SearchRequestController(IMediator _mediator) : ControllerBase
 {
