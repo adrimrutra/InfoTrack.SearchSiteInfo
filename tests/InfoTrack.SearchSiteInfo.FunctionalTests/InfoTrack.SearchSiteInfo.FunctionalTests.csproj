@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\InfoTrack.SearchSiteInfo.KernelSetupTests\InfoTrack.SearchSiteInfo.KernelSetupTests.csproj" />
     <ProjectReference Include="..\..\src\InfoTrack.SearchSiteInfo.WebApi\InfoTrack.SearchSiteInfo.WebApi.csproj" />
+    <ProjectReference Include="..\InfoTrack.SearchSiteInfo.KernelSetupTests\InfoTrack.SearchSiteInfo.KernelSetupTests.csproj" />
   </ItemGroup>
 
 </Project>
