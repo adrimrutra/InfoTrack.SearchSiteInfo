@@ -37,6 +37,13 @@ To start using application first Clone Repository.
 4. To start aplication run 'ng serve' command.
 5. The application can be opend in brouser using: 'localhost:4200'
 
+## Search page
+![image](https://github.com/user-attachments/assets/7982d176-10de-4afd-a30b-b6a1309d5eda)
+
+## History page
+![image](https://github.com/user-attachments/assets/846f4cf7-e5ad-4891-8374-d59639296d9c)
+
+
 
 # Architecture
 
@@ -73,6 +80,10 @@ The entry point of the application is the ASP.NET Core web api project.
 
 Test projects have unit, functional, integration tests projects. The projects are using xunit - unit testing tool - [xunit](https://www.nuget.org/packages/xunit) 
 The application is covered with unit, functional and integration tests.
+
+## The UI Angular Project
+
+The project uses Angular 17 framework with karma, jasmine, ng-mocks libraryes.
 
 
 
