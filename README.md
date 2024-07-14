@@ -48,8 +48,6 @@ To start using application first Clone Repository.
 ![image](https://github.com/user-attachments/assets/e9f80b43-83ee-4704-b8ad-574bde0dc442)
 
 
-
-
 # Architecture
 
 The application designed with Clean Architecture, with patterns: SQRS, Repository, Unit of work and few other paterns.
