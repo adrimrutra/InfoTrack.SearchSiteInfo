@@ -39,7 +39,7 @@ To start using application first Clone Repository.
 2. In terminal run command 'npm install' to install dependencies. 
 3. Optionaly run 'ng test' to test apllication.
 4. To start aplication run 'ng serve' command.
-5. The application can be opened in browser using: ###localhost:4200
+5. The application can be opened in browser using: ### localhost:4200
 
 ## Search page
 ![image](https://github.com/user-attachments/assets/7982d176-10de-4afd-a30b-b6a1309d5eda)
