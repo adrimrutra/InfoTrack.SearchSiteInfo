@@ -20,9 +20,11 @@ The main branch is using .NET 8, Angular 17
 1. Clone repository. 
 2. Open InfoTrack.SearchSiteInfo.sln solution file in visual studio. 
 3. Set InfoTrack.SearchSiteInfo.WebApi project as Startup project.
-4. Build project.
-5. Use 'InfoTrack.SearchSiteInfo.WebApi' as the Launch Profile.
-6. ![image](https://github.com/user-attachments/assets/17256981-bdc6-40fb-9f7d-33a27893bbbb)
+4. Connection to DAtaBase can be located in appsettings.json file. 
+    ("Server=localhost\\SQLEXPRESS;Database=InfoTrackSearchSiteInfoDb;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False")
+5. Build project.
+6. Use 'InfoTrack.SearchSiteInfo.WebApi' as the Launch Profile. ![image](https://github.com/user-attachments/assets/17256981-bdc6-40fb-9f7d-33a27893bbbb)
+7. When application will start it automatically will create 'InfoTrackSearchSiteInfoDb' database and populate it with side data.
 
 
 # Architecture
