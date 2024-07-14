@@ -10,7 +10,7 @@
   },
 
   "profiles": {
-    "https": {
+    "InfoTrack.SearchSiteInfo.WebApi": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
