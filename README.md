@@ -12,16 +12,18 @@ The main branch is using .NET 8, Angular 17
 
 # Requirements
 
-Make sure you have SQL Express and .Net 8.0 installed on your machine.
-Make sure you have npm and Node.js installed on your machine.
+1. Make sure you have SQL Express and .Net 8.0 installed on your machine.
+2. Make sure you have npm and Node.js installed on your machine.
 
 # Getting Started
 
 1. Clone repository. 
 2. Open InfoTrack.SearchSiteInfo.sln solution file in visual studio. 
 3. Set InfoTrack.SearchSiteInfo.WebApi project as Startup project.
-4. Build project
-5. Use 'http' as the Launch Profile 
+4. Build project.
+5. Use 'InfoTrack.SearchSiteInfo.WebApi' as the Launch Profile.
+6. ![image](https://github.com/user-attachments/assets/17256981-bdc6-40fb-9f7d-33a27893bbbb)
+
 
 # Architecture
 
