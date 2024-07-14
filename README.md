@@ -20,19 +20,19 @@ The main branch is using .NET 8, Angular 17
 # Getting Started
 
  Clone repository.
- ## Back End
-    1. Open InfoTrack.SearchSiteInfo.sln solution file in visual studio. 
-    2. Set InfoTrack.SearchSiteInfo.WebApi project as Startup project.
-    3. Connection to DataBase can be located in appsettings.json file: 
-        Server=localhost\\SQLEXPRESS;Database=InfoTrackSearchSiteInfoDb;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False
-    4. Use 'InfoTrack.SearchSiteInfo.WebApi' as the Launch Profile. ![image](https://github.com/user-attachments/assets/17256981-bdc6-40fb-9f7d-33a27893bbbb)
-    5. Build project.
-    6. When application will start it automatically will create 'InfoTrackSearchSiteInfoDb' database and populate it with seed data.
+## Back End
+1. Open InfoTrack.SearchSiteInfo.sln solution file in visual studio.
+2. Set InfoTrack.SearchSiteInfo.WebApi project as Startup project.
+3. Connection to DataBase can be located in appsettings.json file: 
+   Server=localhost\\SQLEXPRESS;Database=InfoTrackSearchSiteInfoDb;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False
+4. Use 'InfoTrack.SearchSiteInfo.WebApi' as the Launch Profile. ![image](https://github.com/user-attachments/assets/17256981-bdc6-40fb-9f7d-33a27893bbbb)
+5. Build project.
+6. When application will start it automatically will create 'InfoTrackSearchSiteInfoDb' database and populate it with seed data.
 
 ## Front End
-   1. Go to 'InfoTrack.SearchSiteInfo\InfoTrack_SearchSiteInfoUI' and open the folder preferebly in Visual Studio Code.
-   2. In terminal run command 'npm install' and 'ng serve'
-   3. The application can be opend in brouser using: 'localhost:4200'
+1. Go to 'InfoTrack.SearchSiteInfo\InfoTrack_SearchSiteInfoUI' and open the folder preferebly in Visual Studio Code.
+2. In terminal run command 'npm install' and 'ng serve'
+3. The application can be opend in brouser using: 'localhost:4200'
 
 
 # Architecture
