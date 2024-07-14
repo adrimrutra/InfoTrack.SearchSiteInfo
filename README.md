@@ -45,7 +45,8 @@ To start using application first Clone Repository.
 ![image](https://github.com/user-attachments/assets/7982d176-10de-4afd-a30b-b6a1309d5eda)
 
 ## History page
-![image](https://github.com/user-attachments/assets/846f4cf7-e5ad-4891-8374-d59639296d9c)
+![image](https://github.com/user-attachments/assets/e9f80b43-83ee-4704-b8ad-574bde0dc442)
+
 
 
 
