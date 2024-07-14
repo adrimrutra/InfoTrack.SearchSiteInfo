@@ -12,19 +12,27 @@ The main branch is using .NET 8, Angular 17
 
 # Requirements
 
-1. Make sure you have SQL Express and .Net 8.0 installed on your machine.
-2. Make sure you have npm and Node.js installed on your machine.
+## Back End
+ Make sure you have 'SQL Express' and '.Net Core 8.0' installed on your machine.
+## Front End
+ Make sure you have 'npm', 'Node.js' and 'Angular 17' installed on your machine.
 
 # Getting Started
 
-1. Clone repository. 
-2. Open InfoTrack.SearchSiteInfo.sln solution file in visual studio. 
-3. Set InfoTrack.SearchSiteInfo.WebApi project as Startup project.
-4. Connection to DAtaBase can be located in appsettings.json file. 
-    ("Server=localhost\\SQLEXPRESS;Database=InfoTrackSearchSiteInfoDb;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False")
-5. Build project.
-6. Use 'InfoTrack.SearchSiteInfo.WebApi' as the Launch Profile. ![image](https://github.com/user-attachments/assets/17256981-bdc6-40fb-9f7d-33a27893bbbb)
-7. When application will start it automatically will create 'InfoTrackSearchSiteInfoDb' database and populate it with side data.
+ Clone repository.
+ ## Back End
+    1. Open InfoTrack.SearchSiteInfo.sln solution file in visual studio. 
+    2. Set InfoTrack.SearchSiteInfo.WebApi project as Startup project.
+    3. Connection to DataBase can be located in appsettings.json file: 
+        Server=localhost\\SQLEXPRESS;Database=InfoTrackSearchSiteInfoDb;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False
+    4. Use 'InfoTrack.SearchSiteInfo.WebApi' as the Launch Profile. ![image](https://github.com/user-attachments/assets/17256981-bdc6-40fb-9f7d-33a27893bbbb)
+    5. Build project.
+    6. When application will start it automatically will create 'InfoTrackSearchSiteInfoDb' database and populate it with seed data.
+
+## Front End
+   1. Go to 'InfoTrack.SearchSiteInfo\InfoTrack_SearchSiteInfoUI' and open the folder preferebly in Visual Studio Code.
+   2. In terminal run command 'npm install' and 'ng serve'
+   3. The application can be opend in brouser using: 'localhost:4200'
 
 
 # Architecture
