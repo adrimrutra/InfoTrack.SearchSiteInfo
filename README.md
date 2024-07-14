@@ -70,7 +70,7 @@ The project implements interfaces defined in Core with paterns Repository, Unit 
 
 ## The UseCases Project
 
-The project implements CQRS patern and other dependencis.
+The project implements CQRS patern.
 
 ## The WebApi Project
 
@@ -83,7 +83,7 @@ The application is covered with unit, functional and integration tests.
 
 ## The UI Angular Project
 
-The project uses Angular 17 framework with karma, jasmine, ng-mocks libraryes.
+The project uses Angular 17 framework with karma, jasmine, ng-mocks libraries.
 
 
 
