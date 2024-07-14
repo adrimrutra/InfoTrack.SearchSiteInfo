@@ -24,11 +24,15 @@ To start using application first Clone Repository.
 ## Back End
 1. Go to 'InfoTrack.SearchSiteInfo' folder and open InfoTrack.SearchSiteInfo.sln solution file in Visual studio 2022.
 2. Set InfoTrack.SearchSiteInfo.WebApi project as Startup project.
-3. Connection to DataBase can be located in appsettings.json file: 
-   Server=localhost\\SQLEXPRESS;Database=InfoTrackSearchSiteInfoDb;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False
-4. Use 'InfoTrack.SearchSiteInfo.WebApi' as the Launch Profile. ![image](https://github.com/user-attachments/assets/17256981-bdc6-40fb-9f7d-33a27893bbbb)
-5. Build project.
-6. When application will start it automatically will create 'InfoTrackSearchSiteInfoDb' database and populate it with seed data.
+3. Connection to DataBase can be located in appsettings.json file:
+   Using SQL Express Server:
+   ### Server=localhost\\SQLEXPRESS;Database=InfoTrackSearchSiteInfoDb;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False
+   Or if needed use SQL Server: 
+   ### Server=(local);Database=InfoTrackSearchSiteInfoDb;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False
+   
+5. Use 'InfoTrack.SearchSiteInfo.WebApi' as the Launch Profile. ![image](https://github.com/user-attachments/assets/17256981-bdc6-40fb-9f7d-33a27893bbbb)
+6. Build project.
+7. When application will start it automatically will create 'InfoTrackSearchSiteInfoDb' database and populate it with seed data.
 
 ## Front End
 1. Go to 'InfoTrack.SearchSiteInfo\InfoTrack_SearchSiteInfoUI' and open project folder preferably in Visual Studio Code.
