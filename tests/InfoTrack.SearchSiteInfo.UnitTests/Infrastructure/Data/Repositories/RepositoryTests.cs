@@ -77,7 +77,7 @@ public class RepositoryTests : IDisposable
   public async Task GetAllAsync_WhenDbSetIsEmpty_ShouldReturnEmptyCollection()
   {
     // Arrange
-    SetupDataBase();
+    ClearDataBase();
     var cancellationToken = new CancellationToken();
     var repository = _unitOfWork.GetRepository<SearchRequest>();
 
@@ -95,7 +95,11 @@ public class RepositoryTests : IDisposable
       _context.SearchRequests.AddRange(searchRequest1, searchRequest2, searchRequest3);
       _context.SaveChanges();
     }
-    else
+  }
+
+  private void ClearDataBase()
+  {
+    if (_context.SearchRequests.Any())
     {
       _context.SearchRequests.RemoveRange(_context.SearchRequests);
       _context.SaveChanges();
